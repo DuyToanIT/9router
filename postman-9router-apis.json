@@ -1,0 +1,2681 @@
+{
+  "info": {
+    "name": "9router APIs",
+    "_postman_id": "9router-apis-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:20128"
+    }
+  ],
+  "item": [
+    {
+      "name": "POST /api/9remote/install",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/9remote/install",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "9remote",
+            "install"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/9remote/start",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/9remote/start",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "9remote",
+            "start"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/9remote/status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/9remote/status",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "9remote",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/auth/login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/auth/login",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/auth/logout",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/auth/logout",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/cli-tools/antigravity-mitm/alias",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/antigravity-mitm/alias",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "antigravity-mitm",
+            "alias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT /api/cli-tools/antigravity-mitm/alias",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/antigravity-mitm/alias",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "antigravity-mitm",
+            "alias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/cli-tools/antigravity-mitm",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/antigravity-mitm",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "antigravity-mitm"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/cli-tools/antigravity-mitm",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/antigravity-mitm",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "antigravity-mitm"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH /api/cli-tools/antigravity-mitm",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/antigravity-mitm",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "antigravity-mitm"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/cli-tools/antigravity-mitm",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/antigravity-mitm",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "antigravity-mitm"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/cli-tools/claude-settings",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/claude-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "claude-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/cli-tools/claude-settings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/claude-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "claude-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/cli-tools/claude-settings",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/claude-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "claude-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/cli-tools/codex-settings",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/codex-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "codex-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/cli-tools/codex-settings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/codex-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "codex-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/cli-tools/codex-settings",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/codex-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "codex-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/cli-tools/copilot-settings",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/copilot-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "copilot-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/cli-tools/copilot-settings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/copilot-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "copilot-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/cli-tools/copilot-settings",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/copilot-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "copilot-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/cli-tools/droid-settings",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/droid-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "droid-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/cli-tools/droid-settings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/droid-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "droid-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/cli-tools/droid-settings",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/droid-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "droid-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/cli-tools/openclaw-settings",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/openclaw-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "openclaw-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/cli-tools/openclaw-settings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/openclaw-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "openclaw-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/cli-tools/openclaw-settings",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/openclaw-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "openclaw-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/cli-tools/opencode-settings",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/opencode-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "opencode-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/cli-tools/opencode-settings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/opencode-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "opencode-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/cli-tools/opencode-settings",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cli-tools/opencode-settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cli-tools",
+            "opencode-settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/cloud/auth",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cloud/auth",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cloud",
+            "auth"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT /api/cloud/credentials/update",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cloud/credentials/update",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cloud",
+            "credentials",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/cloud/model/resolve",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cloud/model/resolve",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cloud",
+            "model",
+            "resolve"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/cloud/models/alias",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cloud/models/alias",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cloud",
+            "models",
+            "alias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT /api/cloud/models/alias",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cloud/models/alias",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cloud",
+            "models",
+            "alias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/combos/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/combos/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "combos",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/combos/:id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/combos/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "combos",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT /api/combos/:id",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/combos/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "combos",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/combos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/combos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "combos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/combos",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/combos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "combos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/init",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/init",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "init"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/keys/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/keys/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "keys",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/keys/:id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/keys/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "keys",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT /api/keys/:id",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/keys/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "keys",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/keys",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/keys",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "keys"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/keys",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/keys",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "keys"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/locale",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/locale",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "locale"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/models/alias",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/models/alias",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "models",
+            "alias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/models/alias",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/models/alias",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "models",
+            "alias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT /api/models/alias",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/models/alias",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "models",
+            "alias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/models/availability",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/models/availability",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "models",
+            "availability"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/models/availability",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/models/availability",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "models",
+            "availability"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/models",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/models",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "models"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT /api/models",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/models",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "models"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/models/test",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/models/test",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "models",
+            "test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/oauth/:provider/:action",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/oauth/:provider/:action",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "oauth",
+            ":provider",
+            ":action"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/oauth/:provider/:action",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/oauth/:provider/:action",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "oauth",
+            ":provider",
+            ":action"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/oauth/cursor/auto-import",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/oauth/cursor/auto-import",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "oauth",
+            "cursor",
+            "auto-import"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/oauth/cursor/import",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/oauth/cursor/import",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "oauth",
+            "cursor",
+            "import"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/oauth/cursor/import",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/oauth/cursor/import",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "oauth",
+            "cursor",
+            "import"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/oauth/gitlab/pat",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/oauth/gitlab/pat",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "oauth",
+            "gitlab",
+            "pat"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/oauth/iflow/cookie",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/oauth/iflow/cookie",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "oauth",
+            "iflow",
+            "cookie"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/oauth/kiro/auto-import",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/oauth/kiro/auto-import",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "oauth",
+            "kiro",
+            "auto-import"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/oauth/kiro/import",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/oauth/kiro/import",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "oauth",
+            "kiro",
+            "import"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/oauth/kiro/social-authorize",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/oauth/kiro/social-authorize",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "oauth",
+            "kiro",
+            "social-authorize"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/oauth/kiro/social-exchange",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/oauth/kiro/social-exchange",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "oauth",
+            "kiro",
+            "social-exchange"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/pricing",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/pricing",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "pricing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/pricing",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/pricing",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "pricing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH /api/pricing",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/pricing",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "pricing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/provider-nodes/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/provider-nodes/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "provider-nodes",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT /api/provider-nodes/:id",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/provider-nodes/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "provider-nodes",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/provider-nodes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/provider-nodes",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "provider-nodes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/provider-nodes",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/provider-nodes",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "provider-nodes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/provider-nodes/validate",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/provider-nodes/validate",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "provider-nodes",
+            "validate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/providers/:id/models",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/providers/:id/models",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "providers",
+            ":id",
+            "models"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/providers/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/providers/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "providers",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/providers/:id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/providers/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "providers",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT /api/providers/:id",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/providers/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "providers",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/providers/:id/test",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/providers/:id/test",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "providers",
+            ":id",
+            "test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/providers/:id/test-models",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/providers/:id/test-models",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "providers",
+            ":id",
+            "test-models"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/providers/client",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/providers/client",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "providers",
+            "client"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/providers/kilo/free-models",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/providers/kilo/free-models",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "providers",
+            "kilo",
+            "free-models"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/providers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/providers",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "providers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/providers",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/providers",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "providers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/providers/test-batch",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/providers/test-batch",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "providers",
+            "test-batch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/providers/validate",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/providers/validate",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "providers",
+            "validate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/proxy-pools/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/proxy-pools/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "proxy-pools",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/proxy-pools/:id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/proxy-pools/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "proxy-pools",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT /api/proxy-pools/:id",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/proxy-pools/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "proxy-pools",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/proxy-pools/:id/test",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/proxy-pools/:id/test",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "proxy-pools",
+            ":id",
+            "test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/proxy-pools",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/proxy-pools",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "proxy-pools"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/proxy-pools",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/proxy-pools",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "proxy-pools"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/settings/database",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/settings/database",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "settings",
+            "database"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/settings/database",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/settings/database",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "settings",
+            "database"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/settings/proxy-test",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/settings/proxy-test",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "settings",
+            "proxy-test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/settings/require-login",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/settings/require-login",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "settings",
+            "require-login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/settings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH /api/settings",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/settings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/shutdown",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/shutdown",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "shutdown"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/tags",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/tags",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "tags"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OPTIONS /api/tags",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/tags",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "tags"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /api/translator/console-logs",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/translator/console-logs",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "translator",
+            "console-logs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/translator/console-logs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/translator/console-logs",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "translator",
+            "console-logs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/translator/console-logs/stream",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/translator/console-logs/stream",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "translator",
+            "console-logs",
+            "stream"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/translator/load",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/translator/load",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "translator",
+            "load"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/translator/save",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/translator/save",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "translator",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/translator/send",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/translator/send",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "translator",
+            "send"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/translator/translate",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/translator/translate",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "translator",
+            "translate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/tunnel/disable",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/tunnel/disable",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "tunnel",
+            "disable"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/tunnel/enable",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/tunnel/enable",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "tunnel",
+            "enable"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/tunnel/status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/tunnel/status",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "tunnel",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/usage/:connectionId",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/usage/:connectionId",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "usage",
+            ":connectionId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/usage/chart",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/usage/chart",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "usage",
+            "chart"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/usage/history",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/usage/history",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "usage",
+            "history"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/usage/logs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/usage/logs",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "usage",
+            "logs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/usage/providers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/usage/providers",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "usage",
+            "providers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/usage/request-details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/usage/request-details",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "usage",
+            "request-details"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/usage/request-logs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/usage/request-logs",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "usage",
+            "request-logs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/usage/stats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/usage/stats",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "usage",
+            "stats"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/usage/stream",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/usage/stream",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "usage",
+            "stream"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OPTIONS /api/v1/api/chat",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/api/chat",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "api",
+            "chat"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/v1/api/chat",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/api/chat",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "api",
+            "chat"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OPTIONS /api/v1/chat/completions",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/chat/completions",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "chat",
+            "completions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/v1/chat/completions",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/chat/completions",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "chat",
+            "completions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OPTIONS /api/v1/embeddings",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "embeddings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/v1/embeddings",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "embeddings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OPTIONS /api/v1/messages/count_tokens",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/messages/count_tokens",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "messages",
+            "count_tokens"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/v1/messages/count_tokens",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/messages/count_tokens",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "messages",
+            "count_tokens"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OPTIONS /api/v1/messages",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/messages",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "messages"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/v1/messages",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/messages",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "messages"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/v1/models",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/models",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "models"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OPTIONS /api/v1/models",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/models",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "models"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OPTIONS /api/v1/responses",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/responses",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "responses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/v1/responses",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/responses",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "responses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/v1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OPTIONS /api/v1",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OPTIONS /api/v1beta/models/:path",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1beta/models/:path",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1beta",
+            "models",
+            ":path"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /api/v1beta/models/:path",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1beta/models/:path",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1beta",
+            "models",
+            ":path"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/v1beta/models",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1beta/models",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1beta",
+            "models"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OPTIONS /api/v1beta/models",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1beta/models",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1beta",
+            "models"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/version",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/version",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "version"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
