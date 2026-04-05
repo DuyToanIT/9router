@@ -14,7 +14,7 @@ WORKDIR /app
 LABEL org.opencontainers.image.title="9router"
 
 ENV NODE_ENV=production
-ENV PORT=20128
+ENV PORT=20267
 ENV HOSTNAME=0.0.0.0
 ENV NEXT_TELEMETRY_DISABLED=1
 
@@ -29,11 +29,14 @@ COPY --from=builder /app/node_modules/node-forge ./node_modules/node-forge
 
 RUN mkdir -p /app/data
 
-# Fix permissions at runtime (handles mounted volumes)
-RUN printf '#!/bin/sh\nchown -R node:node /app/data 2>/dev/null; exec su-exec node "$@"\n' > /entrypoint.sh && chmod +x /entrypoint.sh
+# Fix permissions at runtime - chown both app/data and mounted /data volume
+RUN printf '#!/bin/sh\n\
+chown -R node:node /app/data 2>/dev/null || true; \
+chown -R node:node /data 2>/dev/null || true; \
+exec su-exec node "$@"\n' > /entrypoint.sh && chmod +x /entrypoint.sh
 RUN apk add --no-cache su-exec
 
-EXPOSE 20128
+EXPOSE 20267
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["node", "server.js"]
