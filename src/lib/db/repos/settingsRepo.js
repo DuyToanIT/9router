@@ -60,6 +60,10 @@ function mergeWithDefaults(raw) {
       }
     }
   }
+  // Allow env var to override requireLogin regardless of DB value
+  if (process.env.REQUIRE_LOGIN !== undefined) {
+    merged.requireLogin = process.env.REQUIRE_LOGIN !== "false";
+  }
   return merged;
 }
 
