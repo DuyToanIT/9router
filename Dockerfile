@@ -21,7 +21,7 @@ WORKDIR /app
 LABEL org.opencontainers.image.title="9router"
 
 ENV NODE_ENV=production
-ENV PORT=20128
+ENV PORT=20267
 ENV HOSTNAME=0.0.0.0
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV DATA_DIR=/app/data
@@ -51,7 +51,7 @@ chown -R node:node "$DATA_TARGET" /app/data-home 2>/dev/null
 exec su-exec node "$@"
 EOF
 
-EXPOSE 20128
+EXPOSE 20267
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["node", "server.js"]
