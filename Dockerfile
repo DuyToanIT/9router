@@ -42,9 +42,14 @@ RUN mkdir -p /app/data && chown -R node:node /app && \
   ln -sf /app/data-home /root/.9router 2>/dev/null || true
 
 # Fix permissions at runtime (handles mounted volumes)
-RUN apk --no-cache upgrade && apk --no-cache add su-exec && \
-  printf '#!/bin/sh\nchown -R node:node /app/data /app/data-home 2>/dev/null\nexec su-exec node "$@"\n' > /entrypoint.sh && \
-  chmod +x /entrypoint.sh
+RUN apk --no-cache upgrade && apk --no-cache add su-exec
+COPY --chmod=755 <<'EOF' /entrypoint.sh
+#!/bin/sh
+DATA_TARGET="${DATA_DIR:-/app/data}"
+mkdir -p "$DATA_TARGET" 2>/dev/null || true
+chown -R node:node "$DATA_TARGET" /app/data-home 2>/dev/null
+exec su-exec node "$@"
+EOF
 
 EXPOSE 20128
 
