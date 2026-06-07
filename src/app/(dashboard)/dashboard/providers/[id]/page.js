@@ -29,6 +29,8 @@ export default function ProviderDetailPage() {
   const [showIFlowCookieModal, setShowIFlowCookieModal] = useState(false);
   const [showAddApiKeyModal, setShowAddApiKeyModal] = useState(false);
   const [addConnectionError, setAddConnectionError] = useState("");
+  const [showImportJsonModal, setShowImportJsonModal] = useState(false);
+  const [importJsonState, setImportJsonState] = useState({ loading: false, error: "", success: false });
   const [showEditModal, setShowEditModal] = useState(false);
   const [showEditNodeModal, setShowEditNodeModal] = useState(false);
   const [showBulkProxyModal, setShowBulkProxyModal] = useState(false);
@@ -370,6 +372,58 @@ export default function ProviderDetailPage() {
   const handleIFlowCookieSuccess = () => {
     fetchConnections();
     setShowIFlowCookieModal(false);
+  };
+
+  const handleImportJson = async (jsonData) => {
+    setImportJsonState({ loading: true, error: "", success: false });
+    try {
+      // Accept both the raw token file format and a pre-built connection object
+      let payload;
+      if (jsonData.access_token && jsonData.refresh_token) {
+        // Token file format: {access_token, refresh_token, email, account_id, ...}
+        payload = {
+          provider: "codex",
+          authType: "oauth",
+          accessToken: jsonData.access_token,
+          refreshToken: jsonData.refresh_token,
+          email: jsonData.email || null,
+          expiresAt: jsonData.expired || null,
+          name: jsonData.email ? jsonData.email.split("@")[0] : "Imported Account",
+          priority: 1,
+          isActive: true,
+          testStatus: "active",
+          providerSpecificData: {
+            connectionProxyEnabled: false,
+            connectionProxyUrl: "",
+            connectionNoProxy: "",
+            planType: jsonData.plan_type || null,
+            accountId: jsonData.account_id || null,
+          },
+        };
+      } else {
+        setImportJsonState({ loading: false, error: "Invalid file format. Expected fields: access_token, refresh_token.", success: false });
+        return;
+      }
+
+      const res = await fetch("/api/providers/import-oauth", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setImportJsonState({ loading: false, error: "", success: true });
+        await fetchConnections();
+        setTimeout(() => {
+          setShowImportJsonModal(false);
+          setImportJsonState({ loading: false, error: "", success: false });
+        }, 1500);
+      } else {
+        setImportJsonState({ loading: false, error: data.error || "Import failed", success: false });
+      }
+    } catch (err) {
+      setImportJsonState({ loading: false, error: err.message || "Import failed", success: false });
+    }
   };
 
   const handleSaveApiKey = async (formData) => {
@@ -1063,6 +1117,16 @@ export default function ProviderDetailPage() {
                     Cookie
                   </Button>
                 )}
+                {!isCompatible && providerId === "codex" && (
+                  <Button
+                    size="sm"
+                    icon="upload_file"
+                    variant="secondary"
+                    onClick={() => setShowImportJsonModal(true)}
+                  >
+                    Import JSON
+                  </Button>
+                )}
                 <Button
                   size="sm"
                   icon="add"
@@ -1094,6 +1158,17 @@ export default function ProviderDetailPage() {
                       className="w-full sm:w-auto"
                     >
                       Cookie
+                    </Button>
+                  )}
+                  {providerId === "codex" && (
+                    <Button
+                      size="sm"
+                      icon="upload_file"
+                      variant="secondary"
+                      onClick={() => setShowImportJsonModal(true)}
+                      className="w-full sm:w-auto"
+                    >
+                      Import JSON
                     </Button>
                   )}
                   <Button
@@ -1242,6 +1317,19 @@ export default function ProviderDetailPage() {
         />
       )}
 
+      {/* Import JSON Modal (Codex) */}
+      {providerId === "codex" && (
+        <ImportJsonModal
+          isOpen={showImportJsonModal}
+          state={importJsonState}
+          onImport={handleImportJson}
+          onClose={() => {
+            setShowImportJsonModal(false);
+            setImportJsonState({ loading: false, error: "", success: false });
+          }}
+        />
+      )}
+
       {/* Confirm Modal */}
       <ConfirmModal
         isOpen={!!confirmState}
@@ -1251,6 +1339,129 @@ export default function ProviderDetailPage() {
         message={confirmState?.message}
         variant="danger"
       />
+    </div>
+  );
+}
+
+function ImportJsonModal({ isOpen, state, onImport, onClose }) {
+  const [dragging, setDragging] = useState(false);
+  const [fileName, setFileName] = useState("");
+
+  const processFile = (file) => {
+    if (!file) return;
+    setFileName(file.name);
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const json = JSON.parse(e.target.result);
+        onImport(json);
+      } catch {
+        onImport({ __parseError: true });
+      }
+    };
+    reader.readAsText(file);
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    setDragging(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file) processFile(file);
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files?.[0];
+    if (file) processFile(file);
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center px-3"
+      onClick={onClose}
+    >
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div
+        className="relative bg-surface border border-border rounded-xl w-full max-w-md shadow-2xl p-6"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between mb-5">
+          <div className="flex items-center gap-2">
+            <span className="material-symbols-outlined text-primary text-[22px]">upload_file</span>
+            <h3 className="font-semibold text-lg">Import Token JSON</h3>
+          </div>
+          <button
+            onClick={onClose}
+            className="p-1 rounded-lg hover:bg-bg text-text-muted hover:text-text-main transition-colors"
+          >
+            <span className="material-symbols-outlined text-lg">close</span>
+          </button>
+        </div>
+
+        {/* Drop zone */}
+        <label
+          className={`flex flex-col items-center justify-center gap-3 w-full min-h-[140px] rounded-xl border-2 border-dashed cursor-pointer transition-all select-none mb-4 ${
+            dragging
+              ? "border-primary bg-primary/10 scale-[1.01]"
+              : "border-border hover:border-primary/50 hover:bg-primary/5"
+          }`}
+          onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
+          onDragLeave={() => setDragging(false)}
+          onDrop={handleDrop}
+        >
+          <input
+            type="file"
+            accept=".json,application/json"
+            className="hidden"
+            onChange={handleFileChange}
+          />
+          <span className="material-symbols-outlined text-[36px] text-primary/60">
+            {dragging ? "move_to_inbox" : "description"}
+          </span>
+          <div className="text-center">
+            <p className="text-sm font-medium text-text-main">
+              {fileName || "Drop your token JSON file here"}
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              {fileName ? "or click to choose another file" : "or click to browse"}
+            </p>
+          </div>
+        </label>
+
+        {/* Info hint */}
+        <div className="flex items-start gap-2 rounded-lg bg-blue-500/10 border border-blue-500/20 px-3 py-2 mb-4">
+          <span className="material-symbols-outlined text-blue-500 text-[14px] mt-0.5 shrink-0">info</span>
+          <p className="text-xs text-blue-600 dark:text-blue-400 leading-relaxed">
+            Accepts files with <code className="font-mono bg-blue-500/10 px-1 rounded">access_token</code> and <code className="font-mono bg-blue-500/10 px-1 rounded">refresh_token</code> fields (e.g. exported from Codex CLI).
+          </p>
+        </div>
+
+        {/* Status */}
+        {state.loading && (
+          <div className="flex items-center gap-2 text-sm text-text-muted mb-3">
+            <span className="material-symbols-outlined text-[16px] animate-spin">progress_activity</span>
+            Importing...
+          </div>
+        )}
+        {state.error && (
+          <div className="flex items-start gap-2 rounded-lg bg-red-500/10 border border-red-500/20 px-3 py-2 mb-3">
+            <span className="material-symbols-outlined text-red-500 text-[14px] mt-0.5 shrink-0">error</span>
+            <p className="text-xs text-red-600 dark:text-red-400">{state.error}</p>
+          </div>
+        )}
+        {state.success && (
+          <div className="flex items-center gap-2 rounded-lg bg-green-500/10 border border-green-500/20 px-3 py-2 mb-3">
+            <span className="material-symbols-outlined text-green-500 text-[16px]">check_circle</span>
+            <p className="text-xs text-green-600 dark:text-green-400 font-medium">Imported successfully!</p>
+          </div>
+        )}
+
+        <Button onClick={onClose} variant="ghost" fullWidth>
+          Cancel
+        </Button>
+      </div>
     </div>
   );
 }
